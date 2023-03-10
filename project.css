@@ -237,7 +237,9 @@ line-height: 1;
 }
 
 .services-content{
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
     margin-top: 5rem;
@@ -495,4 +497,117 @@ form textarea{
     font-size: 15px;
     color: var(--TEXTCOLOR);
     background: var(--MAINCOLOR);
+}
+
+@media (max-width: 840px){
+    #menu-icon{
+        display: block;
+    }
+
+    
+
+    .about{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+
+    .about-img{
+        text-align: center;
+    } 
+
+    .about-img img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--BGCOLOR);
+        text-align: left;
+        transition: all .45s ease-in-out;
+
+    }
+
+    .navlist a{
+        display: block;
+        margin: 9px;
+        font-size: 20px;
+        transition: all.45s ease-in-out;
+        color: var(--TEXTCOLOR);
+    }
+
+    .navlist a :hover{
+        color: var(--MAINCOLOR);
+    }
+    .navlist a :active{
+        color: var(--TEXTCOLOR);
+    }
+
+    .navlist .open{
+        top: 100%;
+    }
+
+    .contact{
+        grid-template-columns: 1fr;
+    }
+
+    .main-text{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .services-content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+.home{
+    background-size:contain
+}
+
+.home{
+    height: 80vh;
+}
+
+.box:hover{
+    transform: translateY(20PX);
+    cursor: pointer;
+
+}
+
+ .home-text h1, h3{
+    font-size: 25px;
+}
+
+
+.slide, .one , .two{
+    font-size: 15px;
+    height: 30px;
+}
+
+.home-text h3 {
+    font-size: 25px;
+}
+
+.home-text p{
+    font-size: 15px;
+    margin-top: -30px;
+}
+
+.button a{
+    font-size: 10px;
+    height: 35px;
+    align-items: center;
+    
+}
+
+header{
+    position:absolute;
+}
+
 }
